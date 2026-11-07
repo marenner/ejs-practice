@@ -7,6 +7,17 @@
         <h1>EJS Practice</h1>
         <h2>Hello, <%= person.name %></h2>
         <h3>Occupation: <%= person.occupation %></h3>
+        <% if (['plumber', 'organist',  
+                'bagpiper'].includes(person.occupation.toLowerCase())) { %>
+            <p>You work with pipes!</p>
+        <% } else { %>
+            <p>That's an interesting job!</p>
+        <% } %>
         <h3>Favorite color: <%= person.favoriteColor %></h3>
+        <% if (person.favoriteColor === 'blue') { %>
+            <p>Just like the ocean!</p>
+        <% } else { %>
+            <p>That's a good color!</p>
+        <% } %>
     </body>
 </html>
